@@ -2,6 +2,7 @@ package com.dharamveer.my_practice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 txtUsername.setError(null);
                 txtPassword.setError(null);
                 Toast.makeText(this, "Login Successful!!!", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, INtentpassed2.class);
+                i.putExtra("username", txtUsername.getText().toString());
+                startActivity(i);
             }
         });
     }
